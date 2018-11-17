@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script type="text/javascript" src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Dosis"
+      rel="stylesheet"
+    />
+    <title>Berlin Quiz</title>
+  </head>
+
+  <body>
+    <!-- HEADLINE -->
+    <header>THE ULTIMATE BERLIN QUIZ</header>
+
+    <div id="outerContainer">
+      <!-- WHEEL -->
+      <section id="wheel">
+        <canvas id="canvas" width="400" height="400"></canvas>
+
+        <button>SPIN</button>
+      </section>
+
+      <!-- QUIZ -->
+      <section id="quiz">
+        <div id="counter">5</div>
+
+        <div id="questionContainer">
+
+          <div id="fromatob">
+          <!-- QUESTION 1 -->
+          <div class="question">
+            <strong>If you take the S42 you circle the city</strong>
+
+            <form class="answers">
+              <div class="answerSet">
+                <input
+                  type="radio"
+                  id="clock-wise"
+                  value="correct"
+                  name="questionOne"
+                />
+                <label for="clock-wise">clock-wise</label>
+              </div>
+
+              <div class="answerSet correct">
+                <input type="radio" id="anti-clock-wise" name="questionOne" />
+                <label for="anti-clock-wise">anti-clock-wise</label>
+              </div>
+            </form>
+          </div>
+
+          <!-- QUESTION 2 -->
+          <div class="question">
+            <strong>How many lines does the U-Bahn have?</strong>
+
+            <form class="answers">
+              <div class="answerSet correct">
+                <input
+                  type="radio"
+                  id="10"
+                  value="correct"
+                  name="questionTwo"
+                />
+                <label for="10">10</label>
+              </div>
+
+              <div class="answerSet">
+                <input type="radio" id="9" name="questionTwo" />
+                <label for="9">9</label>
+              </div>
+            </form>
+          </div>
+
+          <!-- QUESTION 3 -->
+
+          <!-- QUESTION 4 -->
+
+          <!-- QUESTION 5 -->
+        </div>
+
+        <div id="clubscene">
+            <!-- QUESTION 1 -->
+            <div class="question" id="questionOne">
+              <strong>What's the first name of Berghain's bouncer?</strong>
+  
+              <form class="answers">
+                <div class="answerSet">
+                  <input
+                    type="radio"
+                    id="sven"
+                    value="correct"
+                    name="questionOne"
+                  />
+                  <label for="sven">Sven</label>
+                </div>
+  
+                <div class="answerSet correct">
+                  <input type="radio" id="thomas" name="questionOne" />
+                  <label for="thomas">Thomas</label>
+                </div>
+              </form>
+            </div>
+  
+            <!-- QUESTION 2 -->
+            <div class="question">
+              <strong>Where is Heideglühen?</strong>
+  
+              <form class="answers">
+                <div class="answerSet">
+                  <input
+                    type="radio"
+                    id="kreuzberg"
+                    name="questionTwo"
+                  />
+                  <label for="kreuzberg">Kreuzberg</label>
+                </div>
+  
+                <div class="answerSet correct">
+                  <input type="radio" id="wedding" value="correct" name="questionTwo" />
+                  <label for="wedding">Wedding</label>
+                </div>
+              </form>
+            </div>
+          </div>
+
+
+        </div>
+
+        <div id="points">
+          <div class="points" id="pointOne"></div>
+          <div class="points" id="pointTwo"></div>
+          <div class="points" id="pointThree"></div>
+          <div class="points" id="pointFour"></div>
+          <div class="points" id="pointFive"></div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
