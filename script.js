@@ -9,15 +9,21 @@ window.onload = function() {
   //QUIZ
   //functions
 
+  //Hides all questions in the beginning:
   $("#fromatob").children().hide();
   $("#clubscene").children().hide();
+  $("#funfacts").children().hide();
+  $("#eatingdrinking").children().hide();
+  $("#districtcliches").children().hide();
 
   var index = 0;
 
+  //Shows the first question of the category #fromatob:
   function printFromatob() {
     $("#fromatob").children().eq(index).show();
   }
 
+  //Adds a green point to the score bar, makes the question disappear and a new question appear:
   function questionRight() {
     $("#points").children().eq(index).addClass("greenpoint");
     $("#fromatob").children().eq(index).hide();
@@ -26,6 +32,7 @@ window.onload = function() {
     $("#fromatob").children().eq(index).show();
   }
 
+  //Adds a red point to the score bar, makes the question disappear and a new question appear:
   function questionWrong() {
     $("#points").children().eq(index).addClass("redpoint");
     $("#fromatob").children().eq(index).hide();
@@ -34,21 +41,25 @@ window.onload = function() {
     $("#fromatob").children().eq(index).show();
   }
 
+  //Checks if the answer that was clicked is the right answer or the wrong answer:
   $(".answerSet input").click(function() {
     if (
       $(this).parent().hasClass("correct")
     ) {
-      console.log("Correct");
+      // console.log("Correct");
       questionRight();
     } else {
-      console.log("Wrong");
+      // console.log("Wrong");
       questionWrong();
     }
   });
 
+  //Checks if all five questions have been answered and the game is over. Then alerts the final score:
   function gameOver() {
-    //has to be i === 4 if we have 5 questions ready
-    if (index === 1) {
+    if (index === 4) {
+
+      window.setTimeout(function (){
+
       var counterRed = 0;
       var counterGreen = 0;
       var points = $(".points");
@@ -61,33 +72,49 @@ window.onload = function() {
         }
       }
       if (counterRed === 0) {
-        alert("The game is over. You got " + counterGreen + " out of 5 questions right. Are you a Berliner?!"
+        alert(
+          "WOW! The game is over. You got " +
+            counterGreen +
+            " out of 5 questions right. You're a real Berliner!"
         );
       }
       if (counterRed === 1) {
-        alert("The game is over. You got " + counterGreen + " out of 5 questions right. Awesome. "
+        alert(
+          "The game is over. You got " +
+            counterGreen +
+            " out of 5 questions right. Awesome. "
         );
       }
       if (counterRed === 2) {
         alert(
-          "The game is over. You got " + counterGreen + " out of 5 questions right. Not bad."
+          "The game is over. You got " +
+            counterGreen +
+            " out of 5 questions right. Not bad."
         );
       }
       if (counterRed === 3) {
         alert(
-          "The game is over. You got " + counterGreen + " out of 5 questions right. You should try this again."
+          "The game is over. You got " +
+            counterGreen +
+            " out of 5 questions right. You should try this again."
         );
       }
       if (counterRed === 4) {
         alert(
-          "The game is over. You got " + counterGreen + " out of 5 questions right. You should try this again. "
+          "The game is over. You got " +
+            counterGreen +
+            " out of 5 questions right. You should try this again. "
         );
       }
       if (counterRed === 5) {
         alert(
-          "The game is over. You got " + counterGreen + " out of 5 questions right. You're a loser."
+          "Oh boy. The game is over. You got " +
+            counterGreen +
+            " out of 5 questions right. Loser!"
         );
       }
+
+    },1000)
     }
   }
 };
