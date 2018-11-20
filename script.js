@@ -3,8 +3,74 @@ window.onload = function() {
 
   var canvas = $("#canvas")[0];
   var ctx = canvas.getContext("2d");
-  ctx.fillStyle = "black";
-  ctx.fillRect(0, 0, 500, 500);
+
+  var radius = 250
+
+  //Draws first Triangle
+  ctx.beginPath();
+  ctx.moveTo(250,250);
+  ctx.arc(250,250,250,0,(Math.PI*2)/5);
+  ctx.fillStyle = "lightgreen";
+  ctx.fill();
+
+  //Draws second Triangle
+
+  ctx.beginPath();
+  ctx.moveTo(250,250);
+  ctx.arc(250,250,250,(Math.PI*2)/5,2*(Math.PI*2)/5);
+  ctx.fillStyle = "darkblue";
+  ctx.fill();
+
+  //Draws third Triangle
+  ctx.beginPath();
+  ctx.moveTo(250,250);
+  ctx.arc(250,250,250,2*(Math.PI*2)/5,3*(Math.PI*2)/5);
+  ctx.fillStyle = "orange";
+  ctx.fill();
+
+  //Draws fourth Triangle
+  ctx.beginPath();
+  ctx.moveTo(250,250);
+  ctx.arc(250,250,250,3*(Math.PI*2)/5,4*(Math.PI*2)/5);
+  ctx.fillStyle = "red";
+  ctx.fill();
+
+  //Draws fifth Triangle
+  ctx.beginPath();
+  ctx.moveTo(250,250);
+  ctx.arc(250,250,250,4*(Math.PI*2)/5,5*(Math.PI*2)/5);
+  ctx.fillStyle = "purple";
+  ctx.fill();
+
+  //Writes Category Text on Canvas
+  ctx.save();
+  ctx.translate(250,250)
+  ctx.rotate (36*Math.PI/180);
+  ctx.font = '30px "Dosis", serif';
+  ctx.fillStyle = "white";
+  ctx.fillText("Berlin Clubscene", 40, 10);
+
+  ctx.rotate (72*Math.PI/180);
+  ctx.font = '30px "Dosis", serif';
+  ctx.fillStyle = "white";
+  ctx.fillText("From A to B", 40, 10);
+
+  ctx.rotate (72*Math.PI/180);
+  ctx.font = '30px "Dosis", serif';
+  ctx.fillStyle = "white";
+  ctx.fillText("Eating & Drinking", 40, 10);
+
+  ctx.rotate (72*Math.PI/180);
+  ctx.font = '30px "Dosis", serif';
+  ctx.fillStyle = "white";
+  ctx.fillText("District Clichées", 40, 10);
+
+  ctx.rotate (72*Math.PI/180);
+  ctx.font = '30px "Dosis", serif';
+  ctx.fillStyle = "white";
+  ctx.fillText("Fun Facts", 40, 10);
+
+  ctx.restore();
 
   //QUIZ
   //functions
