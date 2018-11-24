@@ -6,7 +6,8 @@ header {
   font-size: 45px;
   font-weight: bold;
   text-align: center;
-  margin: 20px;
+  margin-top: 40px;
+  margin-bottom: 60px;
   color: darkmagenta;
 }
 
@@ -37,7 +38,8 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: lightgrey;
+  border: 4px solid darkgrey;
+  /* background-color: lightgrey; */
   border-radius: 60px;
   height: 80px;
   width: 80px;
@@ -48,12 +50,18 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  background-color: lightgrey;
+  border: 4px solid darkgrey;
+  /* background-color: lightgrey; */
   width: 300px;
   height: 200px;
   text-align: center;
   font-size: 18px;
   padding: 10px;
+}
+
+#starttext {
+  font-size:20px;
+  padding-top:40px;
 }
 
 .answers {
