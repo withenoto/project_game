@@ -1,45 +1,55 @@
 body {
   font-family: "Dosis", sans-serif;
+  color:#504988;
+  background: url("code/../berlin-image.jpg");
+  background-size: cover;
+  background-repeat:no-repeat;
+  height: 800px;
 }
 
 header {
-  font-size: 45px;
+  font-size: 50px;
   font-weight: bold;
   text-align: center;
-  margin-top: 40px;
-  margin-bottom: 60px;
-  color: darkmagenta;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color:white;
 }
 
 #outerContainer {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 #wheel {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content:center;
+  width:500px;
+  height:640px;
+  margin-right:50px;
+  /* margin-right:80px; */
 }
 
 #quiz {
   display: flex;
   width: 500px;
-  height: 500px;
+  height: 640px;
   /* background-color: grey; */
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 #counter {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 4px solid darkgrey;
-  /* background-color: lightgrey; */
+  border: 2px solid #704988;
+  background-color: white;
   border-radius: 60px;
   height: 80px;
   width: 80px;
@@ -50,17 +60,21 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  border: 4px solid darkgrey;
-  /* background-color: lightgrey; */
-  width: 300px;
-  height: 200px;
+  align-content:flex-start;
+  border: 2px solid #704988;
+  background-color: white;
+  width: 400px;
+  height: 180px;
   text-align: center;
-  font-size: 18px;
+  font-size: 24px;
   padding: 10px;
+  border-radius: 60px;
+  margin-top:20px;
+  margin-bottom:20px;
 }
 
 #starttext {
-  font-size:20px;
+  font-size:25px;
   padding-top:40px;
 }
 
@@ -96,12 +110,12 @@ input {
 }
 
 .points {
-  border: 1px solid grey;
-  height: 20px;
-  width: 20px;
+  border: 2px solid#704988;
+  height: 35px;
+  width: 35px;
   margin: 10px;
-  border-radius: 10px;
-  background-color: lightgrey;
+  border-radius: 20px;
+  background-color: white;
 }
 
 .greenpoint {
@@ -110,4 +124,27 @@ input {
 
 .redpoint {
   background-color: red;
+}
+
+#totalscore {
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  background: url("code/../blackbrush.png");
+  background-size: cover;
+  background-repeat:no-repeat;
+  height: 160px;
+  width: 400px;
+  color: white;
+  font-size:25px;
+  font-weight:bold;
+}
+
+#totalscore p {
+  margin-right:20%;
+}
+
+img {
+  width: 10%;
+  height: 8%;
 }
