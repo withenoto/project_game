@@ -109,7 +109,7 @@ window.onload = function() {
       ctx.rotate((72 * Math.PI) / 180);
       ctx.font = '28px "Dosis", serif';
       ctx.fillStyle = "white";
-      ctx.fillText("District Clichées", 40, 10);
+      ctx.fillText("Kiez Clichées", 40, 10);
 
       ctx.rotate((72 * Math.PI) / 180);
       ctx.font = '28px "Dosis", serif';
