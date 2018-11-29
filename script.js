@@ -247,7 +247,7 @@ window.onload = function() {
       .eq(index)
       .show();
 
-    $("#counter").html(6);
+    $("#counter").html(10);
 
     countDown = setInterval(function() {
       if (parseFloat($("#counter").html()) === 0) {
@@ -279,7 +279,7 @@ window.onload = function() {
       .children()
       .eq(index)
       .show();
-    $("#counter").html(6);
+    $("#counter").html(10);
     $("#totalscore").html("Total Score: " + totalScore)
   }
 
@@ -301,7 +301,7 @@ window.onload = function() {
       .children()
       .eq(index)
       .show();
-    $("#counter").html(6);
+    $("#counter").html(10);
   }
 
   //Checks if the answer that was clicked is the right answer or the wrong answer:
