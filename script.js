@@ -15,6 +15,23 @@ window.onload = function() {
   $(".districtcliches")
     .children()
     .hide();
+  $(".funfacts")
+    .children()
+    .hide();
+
+    $("#starttext")
+    .children().eq(1)
+    .hide();
+    $("#starttext")
+    .children().eq(2)
+    .hide();
+    $("#starttext")
+    .children().eq(3)
+    .hide();
+    $("#starttext")
+    .children().eq(4)
+    .hide();
+
 
   //FORTUNE WHEEL
 
@@ -201,7 +218,6 @@ window.onload = function() {
       x = 10;
     }
   }
-  //other method: try to only work with remainderrotation for the case fun facts and mini part of district clichees? we know the remainderrotation is smaller than Math.PI*2/5 then it's funfacts and if it is bigger than that and smaller than Math.PI/180 * 90 it is kiezclichees
 
   //Onclick SPIN button
 
@@ -216,14 +232,15 @@ window.onload = function() {
 
   //QUIZ
 
-  //functions
-
   var index = 0;
   var countDown;
+  var noOfRounds = 0;
 
   //Shows the first question of the selected category:
   function printCategory() {
-    $("#starttext").hide();
+    noOfRounds+=1;
+    // $("#starttext").hide();
+    $("#starttext").children().hide();
 
     selectedCategory
       .children()
@@ -301,8 +318,8 @@ window.onload = function() {
   });
 
   //Checks if all five questions have been answered and the game is over. Then alerts the final score:
-  function roundOver() {
 
+  function roundOver() {
     if (index === 4) {
       clearInterval(countDown);
       window.setTimeout(function() {
@@ -319,50 +336,37 @@ window.onload = function() {
         }
 
         
-        if (counterRed === 0) {
+        if (noOfRounds === 5 && totalScore === 25) {
           alert(
-            "WOW! The round is over. You got " +
-              counterGreen +
-              " out of 5 questions right. You're a real Berliner!"
+            "WOW! The game is over. You got " +
+              totalScore +
+              " out of 25 questions right. You're a real Berliner!"
           );
         }
-        if (counterRed === 1) {
+        else if (noOfRounds === 5 && totalScore < 25 && totalScore > 17) {
           alert(
-            "The round is over. You got " +
-              counterGreen +
-              " out of 5 questions right. Awesome. "
+            "The game is over. You got " +
+              totalScore +
+              " out of 25 questions right. Awesome!"
           );
         }
-        if (counterRed === 2) {
+        else if (noOfRounds === 5 && totalScore < 18 && totalScore > 10) {
           alert(
-            "The round is over. You got " +
-              counterGreen +
-              " out of 5 questions right. Not bad."
+            "The game is over. You got " +
+              totalScore +
+              " out of 25 questions right. Oh boy, you should really try this again..."
           );
         }
-        if (counterRed === 3) {
+        else if (noOfRounds === 5 && totalScore < 11) {
           alert(
-            "The round is over. You got " +
-              counterGreen +
-              " out of 5 questions right. You should try this again."
+            "The game is over. You got " +
+              totalScore +
+              " out of 25 questions right. Quite a fail."
           );
         }
-        if (counterRed === 4) {
-          alert(
-            "The round is over. You got " +
-              counterGreen +
-              " out of 5 questions right. You should try this again. "
-          );
-        }
-        if (counterRed === 5) {
-          alert(
-            "Oh boy. The round is over. You got " +
-              counterGreen +
-              " out of 5 questions right. Loser!"
-          );
-        }
+        else{
         selectedCategory.removeClass("notyetprinted");
-        $("#starttext").show();
+        $("#starttext").children().eq(noOfRounds).show();
         $("#spin").prop("disabled", false);
         x = 10;
         for (i = 0; i < points.length; i++) {
@@ -380,8 +384,8 @@ window.onload = function() {
           text.draw();
         }
         $("#counter").html(" ");
-      }, 500);
-      // clearInterval(counter);
+      }
+      }, 1500);
     }
   }
 };

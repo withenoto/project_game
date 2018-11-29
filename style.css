@@ -12,7 +12,7 @@ header {
   font-weight: bold;
   text-align: center;
   margin-top: 30px;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   color:white;
 }
 
@@ -29,19 +29,18 @@ header {
   justify-content:center;
   width:500px;
   height:640px;
-  margin-right:50px;
-  /* margin-right:80px; */
+  margin-right:80px;
 }
 
 #quiz {
   display: flex;
   width: 500px;
   height: 640px;
-  /* background-color: grey; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-right: 50px;
 }
 
 #counter {
@@ -59,15 +58,15 @@ header {
 #questionContainer {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-content:flex-start;
   border: 2px solid #704988;
   background-color: white;
   width: 400px;
-  height: 180px;
+  height: 200px;
   text-align: center;
   font-size: 24px;
-  padding: 10px;
+  /* padding: 10px; */
   border-radius: 60px;
   margin-top:20px;
   margin-bottom:20px;
@@ -75,7 +74,7 @@ header {
 
 #starttext {
   font-size:25px;
-  padding-top:40px;
+  font-weight:bold;
 }
 
 .answers {
@@ -88,16 +87,19 @@ header {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding-top: 10px;
+  /* padding-top: 10px; */
 }
 
 button {
   font-family: "Dosis", sans-serif;
   font-size: 20px;
+  font-weight:bold;
   width: 200px;
   margin: 20px;
   padding: 10px;
   border-radius: 10px;
+  color: #504988;
+  border: 2px solid #704988;
 }
 
 input {
@@ -146,5 +148,5 @@ input {
 
 img {
   width: 10%;
-  height: 8%;
+  height: 6%;
 }
